@@ -36,13 +36,14 @@ router.post('/login', (req, res) => {
             }
         })
         .catch(error => {
-            res.status(500).json({ message: 'There was a problem logging user in.' })
+            res.status(500).json({ message: 'There was a problem logging user in.' });
         });
 });
 
 function generateToken(user) {
     const payload = {
-        userID: user.id
+        sub: user.id,
+        username: user.username
     };
     const options = {
         expiresIn: '1d'

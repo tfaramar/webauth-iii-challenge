@@ -1,3 +1,3 @@
 module.exports = {
-    jwtSecret: process.env.JWT_SECRET || 'ramz' 
+    jwtSecret: process.env.JWT_SECRET || 'ramzramz' 
 }
